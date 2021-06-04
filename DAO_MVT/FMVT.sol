@@ -65,6 +65,7 @@ contract BasicToken is ERC20Basic {
 
 }
 
+// contract ERC20
 contract ERC20 is ERC20Basic {
   function allowance(address owner, address spender) constant returns (uint256);
   function transferFrom(address from, address to, uint256 value) returns (bool);
@@ -72,6 +73,7 @@ contract ERC20 is ERC20Basic {
   event Approval(address indexed _owner, address indexed _spender, uint _value);
 }
 
+// contract 
 contract Token is ERC20, BasicToken {
   mapping (address => mapping (address => uint256)) allowed;
   function transferFrom(address _from, address _to, uint256 _value) returns (bool) {
@@ -83,6 +85,7 @@ contract Token is ERC20, BasicToken {
     return true;
   }
 
+  // approval function
   function approve(address _spender, uint256 _value) returns (bool) {
     require((_value == 0) || (allowed[msg.sender][_spender] == 0));
     allowed[msg.sender][_spender] = _value;
@@ -90,6 +93,7 @@ contract Token is ERC20, BasicToken {
     return true;
   }
 
+  // allowance function
   function allowance(address _owner, address _spender) constant returns (uint256 remaining) {
     return allowed[_owner][_spender];
   }
