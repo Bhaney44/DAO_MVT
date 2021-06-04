@@ -1,13 +1,5 @@
-
-// source
-// https://docs.movementdao.io/tao/mvt
-/**
-  * The Movement DAO
-  * Decentralized Autonomous Organization
-  * Connect and Create 
-  * Smart Contract Address: 0x3D46454212c61ECb7b31248047Fa033120B88668
-  */
-
+Copyright Brian Haney and Archie Chaudhury 2021
+17 U.S.C. §§ 101-800. All rights reserved.
 
 pragma solidity ^0.4.13;
 
